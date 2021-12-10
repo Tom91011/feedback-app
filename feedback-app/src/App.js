@@ -4,9 +4,8 @@ import PropTypes from 'prop-types'
 import FeedbackList from './components/FeedbackList'
 import Feedbackdata from './data/Feedbackdata'
 import FeedbackStats from './components/FeedbackStats'
-
-
 import Header from "./components/Header"
+import FeedbackForm from './components/FeedbackForm'
 
 function App() {
     const [feedback, setFeedback] = useState(Feedbackdata)
@@ -18,8 +17,10 @@ function App() {
 
     return (
         <>
-            <Header text= 'Feedback UI'/>
+            <Header />
+            
             <div className="container">
+                <FeedbackForm />
                 <FeedbackStats feedback={feedback} />
                 <FeedbackList feedback={feedback} handleDelete={deleteFeedback} />
             </div>        

@@ -1,6 +1,5 @@
 function Header({ text }) {
 
-
     
     return (
         <header>
