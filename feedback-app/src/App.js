@@ -3,6 +3,7 @@ import { useState } from 'react'
 import PropTypes from 'prop-types'
 import FeedbackList from './components/FeedbackList'
 import Feedbackdata from './data/Feedbackdata'
+import FeedbackStats from './components/FeedbackStats'
 
 
 import Header from "./components/Header"
@@ -19,6 +20,7 @@ function App() {
         <>
             <Header text= 'Feedback UI'/>
             <div className="container">
+                <FeedbackStats feedback={feedback} />
                 <FeedbackList feedback={feedback} handleDelete={deleteFeedback} />
             </div>        
        </>
