@@ -9,13 +9,17 @@ import Header from "./components/Header"
 
 function App() {
     const [feedback, setFeedback] = useState(Feedbackdata)
-
+    const deleteFeedback = (id) => {
+        if(window.confirm('Are you sure')) {
+            setFeedback(feedback.filter((item) => item.id !== id))
+        }
+    }
 
     return (
         <>
             <Header text= 'Feedback UI'/>
             <div className="container">
-                <FeedbackList feedback={feedback} />
+                <FeedbackList feedback={feedback} handleDelete={deleteFeedback} />
             </div>        
        </>
     )
